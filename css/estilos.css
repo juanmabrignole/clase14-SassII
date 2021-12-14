@@ -18,6 +18,10 @@ h2 {
   text-transform: capitalize;
 }
 
+h3 {
+  text-align: center;
+}
+
 .copy {
   border: 1px solid black;
   border-radius: 10px;
@@ -59,6 +63,66 @@ h2 {
   border: 1px solid transparent;
   padding: 4px 8px;
 }
+#footer #contact label {
+  padding: 5px;
+}
+.copy {
+  background-color: aqua;
+}
+
+h1 {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 50px;
+}
+
+.botonera {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton, .boton--volver, .boton--limpiar {
+  margin: 0px 10px;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.boton--limpiar {
+  background-color: green;
+  color: yellow;
+}
+
+.boton--volver {
+  background-color: red;
+  color: yellow;
+}
+
+h1 {
+  margin: 10px;
+  font-size: 60px;
+}
+
 nav {
   background-color: black;
   padding: 20px;

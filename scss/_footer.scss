@@ -1,5 +1,4 @@
 //Variables
-$col:24;
 $ruta: '../assets/icon';
 $social:
 'twitter',
@@ -38,6 +37,10 @@ h2{
     text-transform: capitalize;
 }
 
+h3{
+    text-align: center;
+}
+
 //Mixins
 
 @mixin crearBordes {
@@ -51,27 +54,28 @@ h2{
     padding: 10px;
 }
 
+
 //Loops
 @each $icon in $social {
     .#{$icon}{
         --bg: url('#{$ruta}/#{$icon}.svg');
-    }
-    
+    }   
 }
 
 //Nesting
 #footer{
     @include formulario($p:16px,);
-    .map{
-
-    }
     #contact{
         background-color: $fondo-formulario;
         @include formulario(16px auto,16px,.25rem,border-radius);
         display: grid;
         input,
-        textarea{
+        textarea
+        {
             @include formulario(none,4px 8px, 1px solid transparent,$ma:outline);
+        }
+        label{
+            padding: 5px;
         }
     }
     .social{
@@ -80,4 +84,76 @@ h2{
         }
     }
 }
+
+// Condicionales- IF
+$bg-color: blue;
+
+.copy{
+    @if ($bg-color == blue){
+        background-color: aqua;
+    } @else if ($bg-color == green){
+        background-color: green;
+    } @else {
+        background-color: grey;
+    }
+}
+
+// FOR
+@for $i from 1 to 6 {
+    h#{$i}{
+        font-size: $i * 10px;
+    }
+}
+
+//EXTENDS
+.botonera{
+    margin: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    margin: 0px 10px;
+    width:200px;
+    height:50px;
+    background-color:white;
+    text-align:center;
+    color:black;
+    border-radius:20px;
+    border:1px solid black;
+}
+
+.boton--limpiar{
+    @extend .boton;
+    background-color:green;
+    color:yellow;
+}
+
+.boton--volver{
+    @extend .boton;
+    background-color:red;
+    color:yellow;
+}
+
+//MAPS
+$encabezados:(
+    h1:60px,
+    h2:50px,
+    h3:40px,
+    h4:30px,
+    h5:20px,
+    h6:10px
+);
+
+//accedo al mapa y a la o las llaves
+$h1: map-get($encabezados, h1 );
+
+h1{
+    margin: 10px;
+    font-size: $h1;
+}
+
+
+
 
