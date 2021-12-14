@@ -1,0 +1,77 @@
+.icon, #footer .social a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 4px;
+  background: var(--bg) center/40px no-repeat;
+}
+.icon:hover, #footer .social a:hover {
+  background-size: 50px;
+}
+
+footer {
+  font-family: verdana;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.copy {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+  padding: 10px;
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 16px;
+}
+#footer #contact {
+  background-color: #7c7cdf;
+  margin: 16px auto;
+  border-radius: 0.25rem;
+  padding: 16px;
+  display: grid;
+}
+#footer #contact input,
+#footer #contact textarea {
+  outline: none;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+}
+nav {
+  background-color: black;
+  padding: 20px;
+}
+nav a {
+  padding: 10px;
+  color: orange;
+  text-decoration: none;
+}
+nav a:hover {
+  color: green;
+  font-size: 21px;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=estilos.css.map */

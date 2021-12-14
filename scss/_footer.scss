@@ -1,0 +1,83 @@
+//Variables
+$col:24;
+$ruta: '../assets/icon';
+$social:
+'twitter',
+'instagram',
+'facebook',
+'github';
+$fondo-formulario: rgb(124, 124, 223);
+$tipografia: verdana;
+$font-size: 20px;
+
+//Mixins
+@mixin formulario ($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
+    #{$ma}:$m;
+    #{$ba}:$b;
+    #{$pa}:$p;
+}
+//Styles
+.icon{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 4px;
+    background: var(--bg) center/40px no-repeat;
+    &:hover{
+        background-size: 50px;
+    }
+}
+
+footer{
+    font-family: $tipografia;
+}
+
+//Operadores
+h2{
+    font-size: ($font-size/4px) * 5px;
+    text-transform: capitalize;
+}
+
+//Mixins
+
+@mixin crearBordes {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;   
+}
+
+.copy{
+    @include crearBordes();
+    padding: 10px;
+}
+
+//Loops
+@each $icon in $social {
+    .#{$icon}{
+        --bg: url('#{$ruta}/#{$icon}.svg');
+    }
+    
+}
+
+//Nesting
+#footer{
+    @include formulario($p:16px,);
+    .map{
+
+    }
+    #contact{
+        background-color: $fondo-formulario;
+        @include formulario(16px auto,16px,.25rem,border-radius);
+        display: grid;
+        input,
+        textarea{
+            @include formulario(none,4px 8px, 1px solid transparent,$ma:outline);
+        }
+    }
+    .social{
+        a{
+            @extend .icon;
+        }
+    }
+}
+

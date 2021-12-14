@@ -1,0 +1,23 @@
+@import "_variables";
+@import "_footer";
+
+//uso del & con el nesting
+ nav{
+     background-color: $color-nav;
+     padding: 20px;
+     a{
+         padding: 10px;
+        color: $color-a;
+        text-decoration: none;
+
+        &:hover{
+            color: $color-fondo;
+            font-size: 21px;
+            text-decoration: underline;
+        }
+     }
+
+ }
+
+
+
