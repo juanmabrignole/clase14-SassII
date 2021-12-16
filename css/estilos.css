@@ -123,18 +123,36 @@ h1 {
   font-size: 60px;
 }
 
-nav {
-  background-color: black;
-  padding: 20px;
+.container {
+  width: 100%;
+  background-color: #7c7cdf;
 }
-nav a {
-  padding: 10px;
-  color: orange;
+.container .navbar {
+  width: 80%;
+  margin: auto;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .navbar .logo {
+  width: 120px;
+  cursor: pointer;
+}
+.container .navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.container .navbar a {
   text-decoration: none;
-}
-nav a:hover {
-  color: green;
   font-size: 21px;
+  color: black;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.container .navbar a:hover {
+  font-size: 22px;
   text-decoration: underline;
 }
 

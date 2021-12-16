@@ -1,0 +1,84 @@
+//variables
+$fondo-navbar: rgb(124, 124, 223);
+$font-navbar: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$size-a: 21px;
+
+//anidacion
+.container{
+    width: 100%;
+    background-color: $fondo-navbar;
+    .navbar{
+        width: 80%;
+        margin: auto;
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 120px;
+            cursor: pointer;
+        }
+        ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+        }
+        a{
+            text-decoration: none;
+            font-size: $size-a;
+            color: black;
+            text-transform: capitalize;
+            font-family: $font-navbar;
+            &:hover{
+                font-size: 22px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//mixin sin parametros
+// @mixin crearbordes() {
+//     border: 5px solid red;
+//     border-radius: 10px;
+//     box-shadow: 0px 0px 5px black;  
+// }
+
+// .bajada{
+//     @include crearbordes();
+// }
+
+//mixin con parametros
+// @mixin bordesnuevos ($color, $size, $shadow) {
+//     border: $size solid $color;
+//     border-radius: $size;
+//     box-shadow: 0px 0px $size $shadow;  
+// }
+
+// .sabermas{
+//     @include bordesnuevos(red,5px,black); 
+// }
+
+// //@extend
+// .parrafo{
+//     @extend .bajada;
+//     font-size: 20px;
+// }
+
+// //maps
+// $estilos: (
+//     color: green,
+//     centro: center,
+//     sizefuente: 35px,
+//     1rem: 1rem,
+// );
+
+// div{
+//     background-color: map-get($map: $estilos, $key: color);
+//     text-align: map-get($map: $estilos, $key: centro);
+//     padding: map-get($map: $estilos, $key: 1rem);
+//     font-size: map-get($map: $estilos, $key: sizefuente);
+// }
+
+
+
